@@ -16,7 +16,7 @@ export default function CartPage() {
     <div style={{ maxWidth: "800px", margin: "50px auto", padding: "0 20px" }}>
       <h2 style={{ textAlign: "center", marginBottom: "30px" }}>Your Cart</h2>
 
-      {cart.map((item, index) => {
+      {cart.map((item: any, index: number) => {
         return (
           <div
             key={item.id ?? index}
