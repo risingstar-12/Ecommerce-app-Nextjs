@@ -13,7 +13,7 @@ type Product = {
 };
 
 type Props = {
-  product: Product[];
+  product: Product;
 };
 
 export default function ProductCard({ product }: Props) {

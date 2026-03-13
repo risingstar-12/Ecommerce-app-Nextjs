@@ -2,6 +2,13 @@
 
 import { useCart } from "../../context/CartContext";
 
+type CartItem = {
+  id: number;
+  title: string;
+  price: number;
+  quantity: number;
+};
+
 export default function CartPage() {
   const { cart, incrementItem, decrementItem, removeItem} = useCart();
 
@@ -16,7 +23,7 @@ export default function CartPage() {
     <div style={{ maxWidth: "800px", margin: "50px auto", padding: "0 20px" }}>
       <h2 style={{ textAlign: "center", marginBottom: "30px" }}>Your Cart</h2>
 
-      {cart.map((item: any, index: number) => {
+      {cart.map((item: CartItem, index: number) => {
         return (
           <div
             key={item.id ?? index}
@@ -93,7 +100,7 @@ export default function CartPage() {
 
       <div style={{ textAlign: "right", marginTop: "30px", fontSize: "18px" }}>
         Total: $
-        {cart.reduce((total, item) => total + item.price * item.quantity, 0)}
+        {cart.reduce((total: number, item: CartItem) => total + item.price * item.quantity, 0)}
       </div>
     </div>
   );

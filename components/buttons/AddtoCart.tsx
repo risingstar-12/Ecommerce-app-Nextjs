@@ -1,5 +1,5 @@
 "use client";
-
+import { CSSProperties } from "react";
 import React from "react";
 import { useCart } from "../../context/CartContext";
 
@@ -8,6 +8,7 @@ interface Props {
   title: string;
   price: number;
   thumbnail?: string;
+  style?: CSSProperties;
 }
 
 export default function AddtoCart({ id, title, price, thumbnail }: Props) {
