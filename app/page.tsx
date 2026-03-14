@@ -10,7 +10,7 @@ export default function Home() {
   }, []);
   
   return (
-    <div>
+    <div >
       {/* Banner Carousel */}
       <div id="carouselExample" className="carousel slide m-0">
         <div className="carousel-inner">
